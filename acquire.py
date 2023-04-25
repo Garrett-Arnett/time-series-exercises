@@ -3,6 +3,8 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+import env
+
 sns.set()
 
 #imports
@@ -12,6 +14,9 @@ import datetime
 
 
 ################################## Store Acquire Function ############################  
+
+def get_connection(db):
+    return f'mysql+pymysql://{env.user}:{env.password}@{env.host}/{db}'
 
 
 def acquire_store():

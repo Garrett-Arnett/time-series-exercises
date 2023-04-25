@@ -12,6 +12,9 @@ import acquire
 
 ################################################ Prep Store Function ################################################
 
+def get_connection(db):
+    return f'mysql+pymysql://{env.user}:{env.password}@{env.host}/{db}'
+
 
 def prep_store(df):
     '''
